@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/vinvle/static/css/main.c4154b73.css",
+    "main.js": "/vinvle/static/js/main.5228476a.js",
+    "static/js/453.df3c3dbe.chunk.js": "/vinvle/static/js/453.df3c3dbe.chunk.js",
+    "index.html": "/vinvle/index.html",
+    "main.c4154b73.css.map": "/vinvle/static/css/main.c4154b73.css.map",
+    "main.5228476a.js.map": "/vinvle/static/js/main.5228476a.js.map",
+    "453.df3c3dbe.chunk.js.map": "/vinvle/static/js/453.df3c3dbe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4154b73.css",
+    "static/js/main.5228476a.js"
+  ]
+}
