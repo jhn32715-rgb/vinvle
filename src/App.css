@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+* {margin: 0; padding: 0;}
+.nav_link {
   color: white;
 }
+.App li {list-style: none;}
+.App a {color: black; text-decoration: none; display: block;}
+.App img {width: 100%; height: auto; display: block;}
 
-.App-link {
-  color: #61dafb;
+.App p {
+  margin: 0; padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrap .text_box {
+  text-align: center;
+  color: #8F8F86;
+  margin-bottom: 60px;
 }
+.wrap .text01 {
+  color: #89965F;
+  margin-bottom: 30px;
+}
+.wrap .text02 {
+  margin-bottom: 30px;
+}
+.wrap .sub_title01 {
+  color: #626552;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.wrap .sub_title02 {
+  margin-top: 170px;
+  text-align: center;
+}
+.wrap .sub_title03 {
+  text-align: center;
+  color: #818275;
+}
+.wrap .sub_title04 {
+  text-align: center;
+  color: #818C32;
+}
+.App .wrap {
+  width: 1070px;
+  margin: 0 auto;
+}
+.App .visual_main {
+  margin-bottom: 60px;
+}
+.App .wrap .sub_banner {
+  margin-bottom: 90px;
+}
+.App .wrap .product_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 90px; 
+}
+.App .wrap .product_box .product_thumnail {
+  width: 260px;
+  margin-bottom: 30px;
+}
+.App .wrap .product_box .product_thumnail .product_img {
+  width: 260px;
+  margin-bottom: 10px;
+}
+.App .wrap .product_box .product_thumnail .product_title {
+  color: #3B3C32;
+  margin-bottom: 5px;
+}
+.App .wrap .product_box .product_thumnail .product_price {
+  color: #89965F;
+  font-size: 14px;
+}
+.App .wrap .product_box .product_thumnail .product_color {
+  color: #B7BA97;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.App .wrap .product_box .product_thumnail .product_btn {
+  font-size: 14px;
+  padding: 5px 20px;
+  border: none;
+  color: #B7BA97;
+  background-color: #f3f4e6;
+}
+/* .bottom_menu {
+  position: relative;
+}
+.bottom_menu .bottom_sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 100px;
+  padding: 10px 0;
+}
+.bottom_menu:hover .bottom_sub {
+  display: block;
+} */
