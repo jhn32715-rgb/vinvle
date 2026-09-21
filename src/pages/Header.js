@@ -10,6 +10,8 @@ import Bottom from './Bottom';
 import Pants from './Pants';
 import Denim from './Denim';
 import Skirt from './Skirt';
+import Brand from './Brand';
+import Cart from './Cart';
 
 const HeaderTop=styled.div`
   width: 100%;
@@ -107,8 +109,8 @@ export default function Header() {
             <Route path='denim' element={<Denim/>}/>
             <Route path='skirt' element={<Skirt/>}/>
           </Route>
-          <Route path='brand' element={<div>Brand</div>}/>
-          <Route path='cart' element={<div>cart</div>}/>
+          <Route path='brand' element={<Brand/>}/>
+          <Route path='cart' element={<Cart/>}/>
           <Route path='notice' element={<div>notice</div>}/>
         </Route>
       </Routes>

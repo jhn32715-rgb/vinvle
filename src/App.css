@@ -13,13 +13,13 @@
 .wrap .text_box {
   text-align: center;
   color: #8F8F86;
-  margin-bottom: 60px;
+  margin-bottom: 120px;
 }
-.wrap .text01 {
+.wrap .text_box .text01 {
   color: #89965F;
   margin-bottom: 30px;
 }
-.wrap .text02 {
+.wrap .text_box .text02 {
   margin-bottom: 30px;
 }
 .wrap .sub_title01 {
@@ -28,16 +28,22 @@
   margin-bottom: 30px;
 }
 .wrap .sub_title02 {
-  margin-top: 170px;
+  font-size: 24px;
   text-align: center;
+  color: #626552;
+  margin-top: 170px;
+  margin-bottom: 60px;
 }
 .wrap .sub_title03 {
   text-align: center;
   color: #818275;
+  margin-bottom: 30px;
 }
 .wrap .sub_title04 {
+  font-size: 18px;
   text-align: center;
   color: #818C32;
+  margin-bottom: 30px;
 }
 .App .wrap {
   width: 1070px;
@@ -80,21 +86,15 @@
   font-size: 14px;
   padding: 5px 20px;
   border: none;
-  color: #B7BA97;
+  color: #89965F;
   background-color: #f3f4e6;
 }
-/* .bottom_menu {
-  position: relative;
+.wrap .title_box {
+  display: flex;
+  padding: 20px 0;
 }
-.bottom_menu .bottom_sub {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  min-width: 100px;
-  padding: 10px 0;
+.wrap .list_box {
+  display: flex;
+  border-bottom: 1px solid #DDDDDD;
+  padding: 20px 0;
 }
-.bottom_menu:hover .bottom_sub {
-  display: block;
-} */
