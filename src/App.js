@@ -3,7 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
 import data from './pages/productData';
 
-import Header from './pages/Header';
+import Header from './pages/Header'; 
 
 function App() {
   const [products]=useState(data);
