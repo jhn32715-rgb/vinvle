@@ -1,12 +1,30 @@
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
+import { addItem } from './pages/store';
+import { useDispatch } from 'react-redux';
+
 import data from './pages/productData';
+import topData from './pages/topData'
+import bottomData from './pages/bottomData';
+import pantsData from './pages/pantsData';
+import denimData from './pages/denimData';
+import skirtData from './pages/skirtData';
 
 import Header from './pages/Header'; 
+import Details from './pages/Details';
 
 function App() {
   const [products]=useState(data);
+  const dispatch=useDispatch();
+  const allProducts=[
+    ...products,
+    ...topData,
+    ...bottomData,
+    ...pantsData,
+    ...denimData,
+    ...skirtData
+  ];
   return (
     <div className="App">
       <Header/>
@@ -31,15 +49,15 @@ function App() {
                   products.slice(0,8).map((product,index)=>{
                     return(
                       <div className='product_thumnail'>
-                        <Link to={`details/${index}`}>
+                        <Link to={`/details/${product.id}`}>
                           <div className='product_img'>
                             <img src={product.image} alt='스페셜 상품 이미지'/>
                           </div>
                           <p className='product_title'>{product.title}</p>
-                          <p className='product_price'>{product.price}</p>
+                          <p className='product_price'>{product.price.toLocaleString()}</p>
                           <p className='product_color'>{product.color}</p>
                         </Link>
-                        <button className='product_btn'>장바구니</button>
+                        <button className='product_btn'  onClick={()=>{dispatch(addItem({id:product.id,price:product.price,color:product.color,title:product.title,count:1}))}}>장바구니</button>
                       </div>
                     )
                   })
@@ -51,15 +69,15 @@ function App() {
                   products.slice(8,16).map((product,index)=>{
                     return(
                       <div className='product_thumnail'>
-                        <Link to={`details/${index}`}>
+                        <Link to={`/details/${product.id}`}>
                           <div className='product_img'>
                             <img src={product.image} alt='스페셜 상품 이미지' style={{width:260}}/>
                           </div>
                           <p className='product_title'>{product.title}</p>
-                          <p className='product_price'>{product.price}</p>
+                          <p className='product_price'>{product.price.toLocaleString()}</p>
                           <p className='product_color'>{product.color}</p>
                         </Link>
-                        <button className='product_btn'>장바구니</button>
+                        <button className='product_btn'  onClick={()=>{dispatch(addItem({id:product.id,price:product.price,color:product.color,title:product.title,count:1}))}}>장바구니</button>
                       </div>
                     )
                   })
@@ -74,15 +92,15 @@ function App() {
                   products.slice(16,24).map((product,index)=>{
                     return(
                       <div className='product_thumnail'>
-                        <Link to={`details/${index}`}>
+                        <Link to={`/details/${product.id}`}>
                           <div className='product_img'>
                             <img src={product.image} alt='오늘배송 상품 이미지' style={{width:260}}/>
                           </div>
                           <p className='product_title'>{product.title}</p>
-                          <p className='product_price'>{product.price}</p>
+                          <p className='product_price'>{product.price.toLocaleString()}</p>
                           <p className='product_color'>{product.color}</p>
                         </Link>
-                        <button className='product_btn'>장바구니</button>
+                        <button className='product_btn'  onClick={()=>{dispatch(addItem({id:product.id,price:product.price,color:product.color,title:product.title,count:1}))}}>장바구니</button>
                       </div>
                     )
                   })
@@ -94,15 +112,15 @@ function App() {
                   products.slice(24,32).map((product,index)=>{
                     return(
                       <div className='product_thumnail'>
-                        <Link to={`details/${index}`}>
+                        <Link to={`/details/${product.id}`}>
                           <div className='product_img'>
                             <img src={product.image} alt='오늘배송 상품 이미지' style={{width:260}}/>
                           </div>
                           <p className='product_title'>{product.title}</p>
-                          <p className='product_price'>{product.price}</p>
+                          <p className='product_price'>{product.price.toLocaleString()}</p>
                           <p className='product_color'>{product.color}</p>
                         </Link>
-                        <button className='product_btn'>장바구니</button>
+                        <button className='product_btn'  onClick={()=>{dispatch(addItem({id:product.id,price:product.price,color:product.color,title:product.title,count:1}))}}>장바구니</button>
                       </div>
                     )
                   })
@@ -111,6 +129,7 @@ function App() {
             </div>
           </div>
         }/>
+        <Route path='details/:id' element={<Details products={allProducts}/>}/>
       </Routes>
     </div>
   );

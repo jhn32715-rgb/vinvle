@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import data from './topData'
+import { addItem } from './store';
+import { useDispatch } from 'react-redux';
 
 const SubMenuBox=styled.div`
   width: 600px;
@@ -16,9 +18,10 @@ const SubMenuList=styled.div`
   cursor: pointer;
   color: ${(props)=>props.$active ? '#89965f':'#818275'};
   font-weight: ${(props)=>props.$active ? 'bold':'normal'};
+  transition: all 0.3s;
   &:hover {
+    opacity: 0.5;
     color: #89965F;
-    font-weight: bold;
   }
 `;
 
@@ -28,6 +31,7 @@ export default function Top() {
   const filteredProducts=tab
     ? products.filter((product)=> product.category===tab)
     :products;
+  const dispatch=useDispatch();
   return (
     <div className='wrap'>
       <p className='sub_title02'>TOP</p>
@@ -48,15 +52,15 @@ export default function Top() {
                 className='product_thumnail'
                 key={product.id}
               >
-                <Link to={`details/${product.id}`}>
+                <Link to={`/details/${product.id}`}>
                   <div className='product_img'>
                     <img src={product.image} alt='스페셜 상품 이미지'/>
                   </div>
                   <p className='product_title'>{product.title}</p>
-                  <p className='product_price'>{product.price}</p>
+                  <p className='product_price'>{product.price.toLocaleString()}</p>
                   <p className='product_color'>{product.color}</p>
                 </Link>
-                <button className='product_btn'>장바구니</button>
+                <button className='product_btn'  onClick={()=>{dispatch(addItem({id:product.id,price:product.price,color:product.color,title:product.title,count:1}))}}>장바구니</button>
               </div>
             )
           })
@@ -71,15 +75,15 @@ export default function Top() {
                 className='product_thumnail'
                 key={product.id}
               >
-                <Link to={`details/${product.id}`}>
+                <Link to={`/details/${product.id}`}>
                   <div className='product_img'>
                     <img src={product.image} alt='스페셜 상품 이미지'/>
                   </div>
                   <p className='product_title'>{product.title}</p>
-                  <p className='product_price'>{product.price}</p>
+                  <p className='product_price'>{product.price.toLocaleString()}</p>
                   <p className='product_color'>{product.color}</p>
                 </Link>
-                <button className='product_btn'>장바구니</button>
+                <button className='product_btn'  onClick={()=>{dispatch(addItem({id:product.id,price:product.price,color:product.color,title:product.title,count:1}))}}>장바구니</button>
               </div>
             )
           })

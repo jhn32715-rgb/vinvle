@@ -83,18 +83,15 @@
   margin-bottom: 10px;
 }
 .App .wrap .product_box .product_thumnail .product_btn {
+  width: 100%;
   font-size: 14px;
-  padding: 5px 20px;
+  padding: 10px 20px;
   border: none;
   color: #89965F;
   background-color: #f3f4e6;
+  transition: all 0.3s;
 }
-.wrap .title_box {
-  display: flex;
-  padding: 20px 0;
-}
-.wrap .list_box {
-  display: flex;
-  border-bottom: 1px solid #DDDDDD;
-  padding: 20px 0;
+.App .wrap .product_box .product_thumnail .product_btn:hover {
+  color: #f3f4e6;
+  background-color: #89965F;
 }

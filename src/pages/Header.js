@@ -12,6 +12,7 @@ import Denim from './Denim';
 import Skirt from './Skirt';
 import Brand from './Brand';
 import Cart from './Cart';
+import Notice from './Notice';
 
 const HeaderTop=styled.div`
   width: 100%;
@@ -26,25 +27,32 @@ const HeaderTop=styled.div`
 const NavLink=styled(Nav.Link)`
   color: white !important;
   margin-right: 15px;
+  transition: all 0.3s;
+  &:hover{
+    opacity: 0.5;
+  }
 `;
 const BottomMenu=styled.div`
   position: relative;
   margin-right: 15px;
   &::after{
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 100%;
-      width: 120px;
-      height: 15px;
-    }
-  `;
-  const BottomLink=styled(Nav.Link)`
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 120px;
+    height: 15px;
+  }
+`;
+const BottomLink=styled(Nav.Link)`
   cursor: pointer;
   color: white !important;
+  transition: all 0.3s;
+  &:hover{
+    opacity: 0.5;
+  }
 `;
 const BottomSub=styled.div`
-  display: none;
   position: absolute;
   top: calc(100% + 15px);
   left: -20px;
@@ -53,16 +61,21 @@ const BottomSub=styled.div`
   min-width: 120px;
   z-index: 100;
   text-align: center;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
   ${BottomMenu}:hover & {
-    display: block;
+    opacity: 1;
+    visibility: visible;
   }
 `;
 const SubLink=styled(Nav.Link)`
   display:block;
   padding: 8px 15px;
   color: white !important;
+  transition: all 0.3s;
   &:hover{
-    font-weight: bold;
+    opacity: 0.5;
   }
 `;
 
@@ -111,7 +124,7 @@ export default function Header() {
           </Route>
           <Route path='brand' element={<Brand/>}/>
           <Route path='cart' element={<Cart/>}/>
-          <Route path='notice' element={<div>notice</div>}/>
+          <Route path='notice' element={<Notice/>}/>
         </Route>
       </Routes>
     </div>
