@@ -48,7 +48,7 @@ function App() {
                 {
                   products.slice(0,8).map((product,index)=>{
                     return(
-                      <div className='product_thumnail'>
+                      <div className='product_thumnail' key={product.id}>
                         <Link to={`/details/${product.id}`}>
                           <div className='product_img'>
                             <img src={product.image} alt='스페셜 상품 이미지'/>
@@ -68,7 +68,7 @@ function App() {
                 {
                   products.slice(8,16).map((product,index)=>{
                     return(
-                      <div className='product_thumnail'>
+                      <div className='product_thumnail' key={product.id}>
                         <Link to={`/details/${product.id}`}>
                           <div className='product_img'>
                             <img src={product.image} alt='스페셜 상품 이미지' style={{width:260}}/>
@@ -91,7 +91,7 @@ function App() {
                 {
                   products.slice(16,24).map((product,index)=>{
                     return(
-                      <div className='product_thumnail'>
+                      <div className='product_thumnail' key={product.id}>
                         <Link to={`/details/${product.id}`}>
                           <div className='product_img'>
                             <img src={product.image} alt='오늘배송 상품 이미지' style={{width:260}}/>
@@ -111,7 +111,7 @@ function App() {
                 {
                   products.slice(24,32).map((product,index)=>{
                     return(
-                      <div className='product_thumnail'>
+                      <div className='product_thumnail' key={product.id}>
                         <Link to={`/details/${product.id}`}>
                           <div className='product_img'>
                             <img src={product.image} alt='오늘배송 상품 이미지' style={{width:260}}/>

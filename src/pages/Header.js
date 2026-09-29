@@ -18,11 +18,12 @@ const HeaderTop=styled.div`
   width: 100%;
   background: #ccc7ba;
   color: white;
-  fontSize: 14px;
-  textAlign: center;
+  font-size: 14px;
+  text-align: center;
   padding: 8px;
   position: fixed;
   top: 0;
+  z-index: 10;
 `;
 const NavLink=styled(Nav.Link)`
   color: white !important;
@@ -87,9 +88,10 @@ export default function Header() {
       <Navbar style={{
         width: '100%',
         position: 'fixed',
-        top: 40,
+        top: 37,
         background: 'rgba(63,59,46,0.5)',
         padding: '15px',
+        zIndex: 10,
       }}>
         <Container style={{
           width: 1070,

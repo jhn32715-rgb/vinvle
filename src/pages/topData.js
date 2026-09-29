@@ -317,7 +317,7 @@ const data = [
   {
     id: 'top-37',
     image: process.env.PUBLIC_URL + '/images/product/top/top_37.jpg',
-    title: '[레이어드/도트/시스루] 벤도크 도트 레이어트 티셔츠',
+    title: '[레이어드/도트/시스루] 벤도크 도트 레이어드 티셔츠',
     price: 36000,
     color: '2color',
     category: 'tshirt'
